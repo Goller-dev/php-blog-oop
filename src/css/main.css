@@ -1,0 +1,850 @@
+/*******************************************************
+*
+Theme Name:    Spartan
+Description:   a simple style for my blog
+Version:       1.0
+Author:        Martin Goller
+Tags:          clean, responsive
+*
+*******************************************************/
+
+
+/******************/
+/***** COMMON *****/
+/******************/
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+label {
+	font-size: 1em;
+	color: #666;
+}
+img {
+	width: 40%;
+}
+a {
+	border-radius: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	text-align: left;
+	text-transform: uppercase;
+	border-radius: 5px;
+	padding: 1%;
+	text-transform: uppercase;
+	color: white;
+	font-size: 0.7em;
+	font-weight: 600;
+	}
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.fleft {
+	float: left;
+	margin-right: 1.5%;
+}
+.fright {
+	float: right;
+	margin-left: 1.5%;
+}
+.success {
+	color: green;
+	font-size: 1em;
+	font-weight: 600;
+}
+.error {
+	background-color: #990000;
+	color: tomato;
+	font-size: 1em;
+}
+p.error  {
+	margin-top: 0.2%;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	font-weight: 600;
+}
+.info {
+	color: darkorange;
+	font-size: 0.8em;
+}
+
+
+/* Den Placeholder-Font selbst bestimmen: */
+::-webkit-input-placeholder { font-family: verdana; }
+:-moz-placeholder { font-family: verdana; }
+::-moz-placeholder { font-family: verdana; }
+:-ms-input-placeholder { font-family: verdana; }
+
+input[type="submit"] {
+	color: #666;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background-color: lightblue;
+	color: white;
+}
+
+
+
+/*********************/
+/***** INDEX.PHP *****/
+/*********************/
+/* For mobile phones: */
+
+body{
+   background-color: rgba(135, 135, 135, 0.4);
+	letter-spacing: 0.04em;
+   margin: 0;
+   padding: 0;
+   font-size: 1em;
+	line-height: 0;
+   width: 100%;
+
+}
+
+header {
+   width: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin: 0;
+	display: inline-block;
+	background-image:  url("img/logo.svg");
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: rgb(0,0,0,.7);
+	line-height: 2em;
+}
+.header img {
+   max-height: 168px;
+   max-width: 300px;
+   margin: 1%;
+	float: left;
+}
+h1.mainheadline  {
+	padding: 1%;
+	padding-top: 2.5%;
+	padding-bottom: 0.5%;
+	margin: 0;
+	float: left;
+	width:100%;
+	text-align: center;
+	white-space: nowrap;
+	color: white;
+	text-decoration: none;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	font-weight: 600;
+	box-shadow: none;
+	background: rgb(0,0,0,.4);
+}
+nav {
+   top: 130px;
+   width: 100%;
+   padding: .5% 0 3% 0;
+	line-height: 1em;
+   float: left;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+   margin-bottom: 3%;
+	background: rgb(0,0,0,.4);
+}
+.nav ul {
+	list-style-type: none;
+   margin-left: 1.25%;
+   padding: 0;
+   width: 97.5%;
+}
+.nav li{
+   float: left;
+   width: 100%;
+}
+.nav a{
+	background: rgb(0,0,0,.8);
+   border-radius: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+   width: 90%;
+   margin: 0.5% -4.5% 0.5% 5.5%;
+   padding: 1.5% 1% 1.5% 1%;
+   float: left;
+	color: white;
+   font-size: 0.8em;
+   font-weight: 600;
+	line-height: 1.5em;
+}
+.nav a:hover {
+   font-size: 1em;
+	line-height: 1.2em;
+}
+.dashboardnav {
+	background: rgb(0,0,0,.8);
+}
+.dashboardnav a{
+	background: rgb(153,0,0,.3);
+}
+.login{
+	width: 250px;
+	margin: 2% 2%;
+	float: right;
+}
+.login form {
+	width: 97.5%;
+	margin-left: 1.25%;
+}
+
+.login input {
+	width: 100%;
+	margin: 1% 0 1.5% 0%;
+	padding: 2%;
+	float: right;
+}
+.login input[type="submit"] {
+	color: white;
+	font-weight: 600;
+	font-size: 0.8em;
+	border: none;
+	border-radius: 5px;
+	background: rgb(153,0,0,.2);
+	box-shadow:  0px 0px 8px 0px #000000;
+	margin: 1% 0 1.5% 0%;
+
+}
+.login input[type="submit"]:hover {
+	background: rgb(8,153,0,0.2);
+}
+.login p {
+	display: inline-block;
+	width: 98%;
+	margin-left: 1%;
+}
+.welcome {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+p.welcome {
+	color: white;
+	float: right;
+	text-align: right;
+	line-height: 2.5em;
+	margin: 0;
+	padding: 2.5%;
+	margin-top: 2.5%;
+	margin-right: 2.5%;
+	margin-bottom: 5%;
+	margin-left: 3%;
+	width: 89%;
+	border-radius: 5px;
+}
+.welcome span {
+	padding: 0;
+	margin-right: 10%;
+	display: inline-block;
+
+}
+.welcome a {
+	float: left;
+	padding: 0;
+	margin-left: 0;
+	font-size: 0.7em;
+	line-height: 2em;
+	text-align: right;
+	width: 90%;
+	margin-bottom: 1.5%;
+}
+.welcome a:hover {
+ 	font-size: 1em;
+ 	line-height: 1.4em;
+}
+
+/* Form Elements */
+input {
+	display: inline-block;
+}
+.marker {
+	font-weight: bold;
+	color: darkred;
+	margin-left: 5px;
+}
+
+h1, h2, h3, h4 {
+   text-align: left;
+	display: inline-block;
+   padding: 1.25% 1% 2% 0;
+   margin: 0% 0% 0% 0%;
+	color: #00001c;
+	font-size: 0.9em;
+}
+.blogentrynav{
+	width: 30%;
+	margin: 0;
+	float: right;
+	margin-top: -1%;
+}
+.blogentrynav p{
+	float: right;
+	width: 100%;
+	margin: 0;
+	line-height: 1.2em;
+}
+
+.blogentrynav a {
+	width: 100%;
+	float: right;
+	text-align: right;
+	font-size: 0.8em;
+	font-weight: 600;
+	padding: 0;
+	margin: 0;
+	color: black;
+	text-decoration: underline;
+}
+.blogentrynav a:hover {
+	font-size: 1em;
+}
+
+
+section {
+	width: 93%;
+	margin: 1% 2.5% 1% 2.5%;
+	padding: 1% 1% 1% 1%;
+	line-height: 1.5em;
+}
+article {
+	width: 100%;
+	padding: 2% 3% 2% 3%;
+	margin: 1% 0 2% 0;
+	background: rgb(255,255,255, 0.7);
+	box-shadow: 5px 7px 10px rgba(0,0,0, 0.4);
+	border-radius: 5px;
+	float: left;
+
+}
+article h3 {
+	font-size: 1em;
+	display: inline-block;
+	float: left;
+	width: 69%;
+	padding: 0;
+	text-decoration: underline;
+	margin: 0 0 0.5% 0;
+}
+div.blogcontent  {
+	float: left;
+	width: 100%;
+	padding: 1%;
+	margin: 1% 0 2% 0;
+	background-color: rgba(255, 255, 255, 0.6);
+	box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.38);
+	border-radius: 5px;
+}
+
+.blogcontent p {
+	color: #00001c;
+
+}
+/*** LINK: "Beitrag lesen" ***/
+a.readPost {
+	color: #00001c;
+	width: inherit;
+	float: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 2%;
+	font-size: 0.9em;
+}
+a:hover.readPost {
+	font-size: 1em;
+}
+.blogcontent img {
+	height: auto;
+	width: auto;
+	max-width: 250px;
+	max-height: 250px;
+	background-color: lightgrey;
+	padding: 1% 1% 1% 1%;
+	margin: 1%;
+	border-radius: 5px;
+	box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.38);
+}
+
+.authorstats {
+	width: 69%;
+	font-size: 0.7em;
+	line-height: 1em;
+	color: #0e0347;
+	float: left;
+	margin: 0;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+
+/*************************/
+/***** DASHBOARD.PHP *****/
+/*************************/
+
+.blogform {
+	width: 100%;
+}
+
+div.fleft.dashboard {
+	margin-right: 5%;
+}
+.fleft.dashboard h2 {
+	margin: 0;
+	padding: 0;
+}
+.bold {
+	font-weight: bold;
+}
+/* Form Elements */
+.blogform form {
+	font-size: 0.8em;
+	color: #666;
+	line-height: 3em;
+}
+.categoryform form {
+	font-size: 0.8em;
+	color: #666;
+	line-height: 3em;
+}
+.blogform label {
+	display: inline-block;
+}
+input.dashboard, select.dashboard, textarea.dashboard {
+	display: inline-block;
+	width: 100%;
+	margin-top: 1.5%;
+	border-radius: 5px;
+	padding: 5px;
+}
+input[type="file"] {
+	width: 280px;
+}
+input[type="submit"].dashboard {
+	height: 50px;
+	border: 1px solid rgb(0,0,0,0.4);
+	background: rgb(0,0,0,0.05);
+	color: black;
+	width: 100%;
+	font-weight: 600;
+	font-size: 1.2em;
+	border-radius: 5px;
+	border: none;
+}
+.dashboard input[type="submit"]:hover {
+	background: rgb(8,153,0,0.3);
+}
+
+
+
+select.dashboard {
+	color: #666;
+}
+textarea.dashboard {
+	height: 300px;
+}
+.alignment {
+	color: #666;
+	width: 120px;
+	padding: 3px 10px;
+	font-weight: normal;
+	border-radius: 5px;
+	border: 1px solid darkgray;
+}
+
+
+.registration form {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.8em;
+	color: #666;
+	line-height: 3em;
+}
+.registration label {
+	float: left;
+	font-size: 1.2em;
+	display: inline-block;
+	width: 30%
+
+}
+.registration input {
+	display: inline-block;
+	width: 70%;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+
+/********** SPECIAL POPUP MESSAGES STYLES **********/
+popupBox {
+	border: 1px solid darkorange;
+	box-shadow: 20px 10px 25px 0px rgba(51,51,51,0.5);
+	border-radius: 10px;
+	background-color: rgba(230,230,230,0.9);
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	color: #666;
+	padding: 25px;
+	position: fixed;
+   margin: auto;
+	left: 25%;
+	top: 40%;
+	font-size: 1.3rem;
+}
+popupBox p {
+	color: black;
+}
+
+popupBox a {
+	border-radius: 5px;
+	padding: 5px 8px;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 1.0rem;
+	text-align: center;
+	width: 30%;
+	margin-right: auto;
+	margin-left: auto;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.6);
+}
+popupBox a:hover, popupBox a.button:hover {
+	background-color: rgba(255,140,0,0.3);
+}
+popupBox a.button {
+	background-color: rgba(255,255,255,0.3);
+	border: 1px solid gray;
+	color: gray;
+	margin-bottom: 20px;
+		display: inline-block;
+}
+popupBox a.button:hover {
+	color: black;
+}
+
+div.underlined {
+	box-shadow: -5px 15px 10px -15px #123;
+	display: inline-block;
+	width: 100%;
+	border-radius: 10px;
+}
+.underlined p {
+	width: 24.99%;
+	float: left;
+	margin-top: 0.5%;
+	margin-bottom: 0.8%;
+	margin-left: 0;
+	margin-right: 0;
+	border-radius: 5px;
+}
+
+.underlined a {
+	border: 1px solid rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.03);
+	text-align: center;
+	float: right;
+	color: black;
+	width: 95%;
+}
+.underlined a:hover {
+	background: rgba(0,0,0,0.2);
+}
+a.deletelink {
+   font-weight: 600;
+	border: 1px solid
+	rgba(0,0,0,0.3);
+	background:
+	rgba(0,0,0,0.03);
+	text-align: center;
+	float: right;
+	color:
+	black;
+}
+a.deletelink:hover {
+	background: crimson;
+}
+a.editlink {
+   border-radius: 5px;
+   font-weight: 600;
+}
+a.editlink:hover {
+	background: rgb(8,153,0,0.4);
+}
+.fullwidth {
+	width: 100%;
+	margin-left: 0;
+}
+p.fullwidth {
+	width: 100%;
+}
+p.dashboardblogheadline {
+	width: 49%;
+}
+
+
+
+/**********************************/
+/********** LIGHTBOX **********/
+/**********************************/
+
+
+.thumbnail {
+  max-width: 40%;
+}
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+   /* For desktop: */
+
+   /**********************************/
+   /********** BASIC STYLES **********/
+   /**********************************/
+div.header {
+   width: 100%;
+	display: inline-block;
+	margin-top: 0;
+}
+.header img {
+   max-height: 168px;
+   max-width: 300px;
+   margin: 1%;
+	float: left;
+}
+h1.mainheadline  {
+	padding: 1%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin: 0;
+	float: left;
+	width: 100%;
+	text-align: center;
+	white-space: nowrap;
+	color: white;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: 600;
+	box-shadow: none;
+	background: rgb(0,0,0,.4);
+}
+main {
+	width: 80%;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+h2{
+	font-size: 1.4em;
+}
+nav {
+   top: 130px;
+   width: 100%;
+   padding: 0 0 1% 0;
+   height:auto;
+   float: left;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+   margin-bottom: 0.5%;
+	background: rgb(0,0,0,.4);
+}
+
+.nav ul {
+	list-style-type: none;
+   margin-left: 1.25%;
+   padding: 0;
+   width: 97.5%;
+	margin-top: 0;
+}
+.nav li{
+   float: left;
+   width: 20%;
+	margin-bottom: 0.5%;
+}
+.nav a{
+   border-radius: 3px;
+   margin: 1% -4.5% 1% 5.5%;
+   padding: 1.5% 1% 1.5% 1%;
+   float: left;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+   font-weight: 600;
+}
+div.login {
+	width: 350px;
+}
+.login form {
+	width: 97.5%;
+	margin-left: 1.25%;
+}
+p.welcome {
+	float: right;
+	margin: 0;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-top: 0.5%;
+	margin-right: 2%;
+	margin-left: 3%;
+}
+
+a.link {
+	width: 95%;
+}
+.dashboardblog {
+	margin-bottom: 2em;
+	line-height: 2em;
+}
+.dashboardblog p {
+	width: 30%;
+	float: left;
+}
+
+
+p.dashboardcontent {
+	width: 49%;
+	float: left;
+	margin-left: 0;
+	margin-right: 0;
+	border-radius: 5px;
+}
+
+.blogform {
+	width: 55%;
+}
+
+
+
+.categoryform {
+	width: 42%;
+	margin-left: 2%;
+}
+
+
+
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+  margin-bottom: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 2em;
+  font-size: 1em;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+	background: rgb(255,216,104);
+	background-image: linear-gradient(60deg, rgba(255,216,104,1) 0%, rgba(205,182,117,0.5) 20%, rgba(205,182,117,.8) 40%, rgba(205,182,117,1) 100%);
+	box-shadow:  0px 0px 0px 0px #000000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: tomato;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
